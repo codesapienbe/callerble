@@ -6,6 +6,6 @@ plugins {
 
 dependencies {
     implementation(project(":common"))
-    // BLE Attach library for implementing BLE services
-    implementation("com.gluonhq.attach:ble:4.0.7")
+    // BLE Attach library for implementing BLE services (exposed to consumers)
+    api("com.gluonhq.attach:ble:4.0.7")
 } 

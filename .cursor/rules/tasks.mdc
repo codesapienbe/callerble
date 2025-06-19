@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- Always add TODO for the code blocks that are only abstracted, stubbed, or in other words, missing implementations. 
+- Never change the complete workflow without my approval
+
+- The code quality must be in senior level, making sure that it follows SOLID, KISS and self-explanatory naming conventions.

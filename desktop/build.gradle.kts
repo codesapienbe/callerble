@@ -11,6 +11,7 @@ application {
 
 dependencies {
     implementation(project(":common"))
+    implementation(project(":service"))
     implementation("com.gluonhq:charm-down-plugin-ble:4.0.12") // Bluetooth LE support
 }
 

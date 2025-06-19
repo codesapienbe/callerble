@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallerBLE - Private Caller ID Sharing via Bluetooth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header/Navigation -->
+  <header class="header">
+    <div class="container flex justify-between items-center">
+      <a href="#" class="logo">CallerBLE</a>
+      <nav class="main-nav">
+        <ul class="nav-list flex gap-16">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="#technology" class="nav-link">Technology</a></li>
+          <li><a href="#use-cases" class="nav-link">Use Cases</a></li>
+          <li><a href="#getting-started" class="nav-link">Getting Started</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>CallerBLE: Private Caller ID Sharing via Bluetooth</h1>
+        <p class="hero-subtitle">Share incoming caller information from mobile to desktop entirely over Bluetooth Low Energy - no cloud, no internet, completely local and private</p>
+        <div class="hero-cta flex gap-16">
+          <a href="#features" class="btn btn--primary">Explore Features</a>
+          <a href="https://github.com/your-org/callerble" target="_blank" class="btn btn--outline">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Key Features</h2>
+        <p>Discover what makes CallerBLE powerful and privacy-focused</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card card">
+          <div class="feature-icon">📡</div>
+          <h3>BLE Broadcasting</h3>
+          <p>Mobile app broadcasts CallerInfo payloads via Bluetooth Low Energy for efficient, low-power communication</p>
+        </div>
+        <div class="feature-card card">
+          <div class="feature-icon">🔒</div>
+          <h3>Local-Only Privacy</h3>
+          <p>No network connectivity or cloud services needed - everything stays completely local and private</p>
+        </div>
+        <div class="feature-card card">
+          <div class="feature-icon">📱</div>
+          <h3>Cross-Platform UI</h3>
+          <p>JavaFX on desktop and Gluon Mobile on Android/iOS with shared codebase and consistent experience</p>
+        </div>
+        <div class="feature-card card">
+          <div class="feature-icon">⚡</div>
+          <h3>Real-time Updates</h3>
+          <p>Instant caller information display on desktop when calls come in on mobile device</p>
+        </div>
+        <div class="feature-card card">
+          <div class="feature-icon">🧩</div>
+          <h3>Modular Design</h3>
+          <p>Clean separation of concerns with pluggable BLE service implementations and shared DTOs</p>
+        </div>
+        <div class="feature-card card">
+          <div class="feature-icon">🧵</div>
+          <h3>Virtual Threads</h3>
+          <p>Java 25 Project Loom integration for efficient, lightweight concurrency in BLE operations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section id="architecture" class="architecture">
+    <div class="container">
+      <div class="section-header">
+        <h2>Architecture</h2>
+        <p>How CallerBLE works from mobile to desktop</p>
+      </div>
+      <div class="arch-diagram">
+        <div class="arch-flow">
+          <div class="arch-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Call Detection</h3>
+              <p>Mobile app detects incoming call and constructs CallerInfo payload</p>
+            </div>
+          </div>
+          <div class="arrow">→</div>
+          <div class="arch-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>BLE Broadcasting</h3>
+              <p>CallerInfoProtocol serializes data and broadcasts via Bluetooth Low Energy</p>
+            </div>
+          </div>
+          <div class="arrow">→</div>
+          <div class="arch-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>BLE Scanning</h3>
+              <p>Desktop client continuously scans for BLE advertisements</p>
+            </div>
+          </div>
+          <div class="arrow">→</div>
+          <div class="arch-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Data Reception</h3>
+              <p>Desktop receives and deserializes CallerInfo, updates JavaFX UI</p>
+            </div>
+          </div>
+        </div>
+        <div class="arch-details">
+          <div class="detail-card card">
+            <h4>CallerInfo Protocol</h4>
+            <p>Lightweight, efficient data protocol that compresses caller information into small BLE advertisement payloads. Includes phone number, caller name, and timestamp data.</p>
+          </div>
+          <div class="detail-card card">
+            <h4>BLE Serialization</h4>
+            <p>Binary serialization optimized for the 31-byte BLE advertisement data limit, using compression techniques to maximize information transfer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack Section -->
+  <section id="technology" class="technology">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technology Stack</h2>
+        <p>Built with modern technologies for performance and cross-platform support</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card card">
+          <h3>Java 25</h3>
+          <span class="tech-category">Language</span>
+          <p>Latest Java with Project Loom virtual threads support</p>
+        </div>
+        <div class="tech-card card">
+          <h3>JavaFX</h3>
+          <span class="tech-category">Desktop UI</span>
+          <p>Modern UI framework for rich desktop applications</p>
+        </div>
+        <div class="tech-card card">
+          <h3>Gluon Mobile</h3>
+          <span class="tech-category">Mobile Framework</span>
+          <p>Cross-platform mobile development with single Java codebase</p>
+        </div>
+        <div class="tech-card card">
+          <h3>Bluetooth Low Energy</h3>
+          <span class="tech-category">Communication</span>
+          <p>Low-power wireless communication protocol</p>
+        </div>
+        <div class="tech-card card">
+          <h3>Gradle Kotlin DSL</h3>
+          <span class="tech-category">Build Tool</span>
+          <p>Modern build system with type-safe configuration</p>
+        </div>
+        <div class="tech-card card">
+          <h3>GluonFX Plugin</h3>
+          <span class="tech-category">Deployment</span>
+          <p>Native packaging and deployment for mobile and desktop</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <h2>Use Cases</h2>
+        <p>Real-world scenarios where CallerBLE enhances productivity and accessibility</p>
+      </div>
+      <div class="use-case-grid">
+        <div class="use-case-card card">
+          <div class="use-case-icon">💼</div>
+          <h3>Remote Work</h3>
+          <p>Get caller alerts on your workstation while sharing your screen or in a meeting</p>
+        </div>
+        <div class="use-case-card card">
+          <div class="use-case-icon">♿</div>
+          <h3>Accessibility</h3>
+          <p>Assist users with limited mobility who can't reach their phone easily</p>
+        </div>
+        <div class="use-case-card card">
+          <div class="use-case-icon">🏪</div>
+          <h3>Kiosk/Point-of-Sale</h3>
+          <p>Display incoming calls on public or shared terminals</p>
+        </div>
+        <div class="use-case-card card">
+          <div class="use-case-icon">⚙️</div>
+          <h3>Development/Testing</h3>
+          <p>Prototype BLE data exchange between devices for development workflows</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Getting Started Section -->
+  <section id="getting-started" class="getting-started">
+    <div class="container">
+      <div class="section-header">
+        <h2>Getting Started</h2>
+        <p>Set up your environment and start using CallerBLE</p>
+      </div>
+      <div class="gs-content">
+        <div class="prerequisites card">
+          <h3>Prerequisites</h3>
+          <ul class="req-list">
+            <li>Java 25 installed and JAVA_HOME set</li>
+            <li>Bluetooth hardware enabled on both devices</li>
+            <li>Android SDK and/or Xcode for mobile builds</li>
+            <li>Windows 10, macOS, or Linux desktop</li>
+            <li>Git to clone repository</li>
+          </ul>
+        </div>
+        <div class="commands card">
+          <h3>Quick Start Commands</h3>
+          <div class="command-block">
+            <h4>Clone Repository</h4>
+            <div class="code-snippet">
+              <code>git clone https://github.com/your-org/callerble.git</code>
+              <button class="copy-btn" data-clipboard-text="git clone https://github.com/your-org/callerble.git">Copy</button>
+            </div>
+          </div>
+          <div class="command-block">
+            <h4>Build Project</h4>
+            <div class="code-snippet">
+              <code>./gradlew clean build --warning-mode all</code>
+              <button class="copy-btn" data-clipboard-text="./gradlew clean build --warning-mode all">Copy</button>
+            </div>
+          </div>
+          <div class="command-block">
+            <h4>Run Desktop Client</h4>
+            <div class="code-snippet">
+              <code>./gradlew :desktop:run</code>
+              <button class="copy-btn" data-clipboard-text="./gradlew :desktop:run">Copy</button>
+            </div>
+          </div>
+          <div class="command-block">
+            <h4>Build for Android</h4>
+            <div class="code-snippet">
+              <code>./gradlew :mobile:gluonfx:package -Ptarget=android</code>
+              <button class="copy-btn" data-clipboard-text="./gradlew :mobile:gluonfx:package -Ptarget=android">Copy</button>
+            </div>
+          </div>
+          <div class="command-block">
+            <h4>Build for iOS</h4>
+            <div class="code-snippet">
+              <code>./gradlew :mobile:gluonfx:package -Ptarget=ios</code>
+              <button class="copy-btn" data-clipboard-text="./gradlew :mobile:gluonfx:package -Ptarget=ios">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>CallerBLE</h2>
+          <p>Private, Local, Real-time Caller Information Sharing</p>
+        </div>
+        <div class="footer-links">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://github.com/your-org/callerble" target="_blank">GitHub Repository</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#getting-started">Documentation</a></li>
+            <li><a href="https://github.com/your-org/callerble/issues" target="_blank">Report Issues</a></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2025 CallerBLE Project. Released under MIT License.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
