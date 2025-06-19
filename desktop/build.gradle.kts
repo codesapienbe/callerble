@@ -1,5 +1,5 @@
 plugins {
-    id("org.gluonhq.gluonfx-gradle-plugin") version "1.0.11"
+    id("com.gluonhq.gluonfx-gradle-plugin") version "1.0.26"
     application
 }
 
