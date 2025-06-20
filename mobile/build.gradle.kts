@@ -1,5 +1,6 @@
 plugins {
     id("com.gluonhq.gluonfx-gradle-plugin") version "1.0.26"
+    application
 }
 
 // Mobile app module (Android & iOS) using Gluon Mobile and BLE
@@ -11,6 +12,11 @@ dependencies {
 }
 
 gluonfx {
-    target = listOf("android", "ios")
-    mainClass = "net.codesapien.callerble.mobile.MainApp"
+    // For manual testing on Windows, target Android only. Use CLI flag or override in Mac for iOS.
+    target = "android"
+}
+
+application {
+    // Define the mobile app entry point for JVM run or GluonFX packaging
+    mainClass.set("net.codesapien.callerble.mobile.MainApp")
 } 

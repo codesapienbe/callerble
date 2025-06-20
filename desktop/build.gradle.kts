@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.closureOf
+
 plugins {
     id("com.gluonhq.gluonfx-gradle-plugin") version "1.0.26"
     application
@@ -12,9 +14,14 @@ application {
 dependencies {
     implementation(project(":common"))
     implementation(project(":service"))
-    implementation("com.gluonhq:charm-down-plugin-ble:4.0.12") // Bluetooth LE support
+    // BLE support is handled by the GluonFX plugin DSL
 }
 
 gluonfx {
-    target = listOf("desktop")
+    // Only desktop build
+    target = "desktop"
+    // Attach BLE service via the GluonFX plugin DSL
+    attachConfig(closureOf<Any> {
+        services("ble")
+    })
 } 

@@ -1,0 +1,10 @@
+# Ignore build system directories and files
+build/
+.gradle/
+.idea/
+.vscode/
+.DS_Store
+.vscode/
+.env
+*.log
+*.log.*
